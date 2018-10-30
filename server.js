@@ -25,9 +25,6 @@ app.get('/api', (req, res) => {
     .get(API_URL)
     .then(function(response) {
       // handle success
-      //   const { results } = response.data;
-      //   console.log(results);
-      console.log('???', response.data.results);
       res.json({ results: response.data.results });
     })
     .catch(function(error) {
