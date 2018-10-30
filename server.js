@@ -1,11 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
 const { json } = require('body-parser');
+const cors = require('cors');
 const axios = require('axios');
 
 /* Logic to start the application */
 
 const app = express();
+app.use(cors()); // enables CORS for all routes
 
 const PORT = process.env.PORT || 5000;
 const HOST = process.env.HOST || '127.0.0.1';
